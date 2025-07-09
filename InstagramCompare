@@ -1,0 +1,26 @@
+import json
+
+followers_file = "followers_1.json"
+following_file = "following.json"
+
+with open(followers_file, "r", encoding="utf-8") as f:
+    followers_data = json.load(f)
+
+with open(following_file, "r", encoding="utf-8") as f:
+    following_data = json.load(f)
+
+following_data = following_data["relationships_following"]
+
+followers = set()
+for entry in followers_data:
+    followers.add(entry["string_list_data"][0]["value"])
+
+following = set()
+for entry in following_data:
+    following.add(entry["string_list_data"][0]["value"])
+
+not_following_back = following - followers
+
+print("Not following Back:")
+for user in sorted(not_following_back):
+    print(user)
