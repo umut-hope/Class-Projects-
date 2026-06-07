@@ -1,0 +1,5 @@
+2026-06-06 19:54:37 - rl_highway - INFO - Configuration loaded:
+2026-06-06 19:54:37 - rl_highway - INFO -   Environment: highway-v0
+2026-06-06 19:54:37 - rl_highway - INFO -   Algorithm: PPO
+2026-06-06 19:54:37 - rl_highway - INFO -   Total timesteps: 50,000
+2026-06-06 19:54:37 - rl_highway - INFO -   Seed: 42
